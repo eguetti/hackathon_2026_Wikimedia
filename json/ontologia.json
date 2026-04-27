@@ -1,0 +1,102 @@
+{
+  "ontologia_neuromat": {
+    "classes": [
+      {
+        "cod":"C1",
+        "id": "Pessoa",
+        "subclasses": ["Autor"],
+        "instance_of_in_wikidata": "Q5"
+      },
+      {
+        "cod":"C2",
+        "id": "Autor",
+        "label": "Autor",
+        "synonyms": ["Pesquisador"],
+        "subclasses": ["Autora", "Pesquisadora"],
+        "description": "Entidade principal que cria uma publicação científica.",
+        "object_properties":["e_autor", "" ],
+        "data_properties":["qid_autor", "nome", "data_nascimento", "sexo_biologico"],
+        "queries": ["Q3","Q4", "Q5", "Q6"]    
+      },
+      {
+        "cod":"C3",
+        "id": "Publicacao",
+        "label": "Publicação de Pesquisa Cientifica", 
+        "synonyms": ["Artigo Cientifico", "Artigo", "Paper"],
+        "description": "Publicação científica",        
+        "object_properties": ["tem_autor", "parte_de"],
+        "data_properties":["qid_artigo"],        
+        "instance_of_in_wikidata": "Q13442814",
+        "queries": ["Q1","Q2"]  
+      },
+      {
+        "cod":"C4",
+        "id": "NeuroMAT",
+        "label": "Centro de Pesquisa Neuromatemateca", 
+        "synonyms": [""],
+        "description": "Centro de Pesquisa Neuromatemateca",        
+        "object_properties": ["tem_artigos"],
+        "data_properties":[""],        
+        "qid": "Q18477654",
+        "queries": ["Q1","Q2", "Q3", "Q4"]        
+      }
+    ],
+    "object_properties": [
+      {
+        "cod":"OP1",
+        "id" : "e_autor",        
+        "label": "é autor de",
+        "synonyms": ["publicou"],
+        "domain": "Autor",
+        "range": "Publicacao",
+        "property_in_wikidata": "P50"
+      },
+      { 
+        "cod":"OP2",
+        "id" : "tem_autor",
+        "label": "foi publicado por o autor",
+        "synonyms": ["foi escrito por"],
+        "domain": "Publicacao",
+        "range": "Autor",        
+        "inverseOf": "e_autor"
+      },
+      { 
+        "cod":"OP3",
+        "id" : "parte_de",
+        "label": "Publicação que forma parte de o neuromat",
+        "synonyms": ["forma parte de"],
+        "domain": "Publicacao",
+        "range": "NeuroMAT",        
+        "property_in_wikidata": "P361"
+      },
+      { 
+        "cod":"OP4",
+        "id" : "tem_artigos",
+        "label": "Instituição que tem artigos publicados",
+        "synonyms": [""],
+        "domain": "NeuroMAT",
+        "range": "Publicacao",        
+        "inverseOf": "parte_de"
+      }                                                                                                         
+    ],
+
+    "data_properties": [            
+      {
+        "cod":"DP1",
+        "id": "qid_autor",
+        "label": "Identificador único de um autor.",
+        "domain": "Autor",
+        "datatype": "Text",
+        "characteristics": "Functional"                
+      },
+      {
+        "cod":"DP2",
+        "id": "qid_artigo",
+        "label": "Identificador único de uma publicação.",
+        "domain": "Publicacao",
+        "datatype": "Text",
+        "characteristics": "Functional"        
+      }
+    ]
+  }   
+}

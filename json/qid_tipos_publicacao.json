@@ -1,0 +1,45 @@
+{
+"qid_tipos_publicaco":
+  [
+  { 
+  "livro": "Q571",
+  "mapa": "Q4006",
+  "filme": "Q11424",
+  "programa de televisão": "Q15416",
+  "página wew": "Q36774",
+  "programa de computador": "Q40056",
+  "documento": "Q49848",
+  "manuscrito": "Q87167",
+  "carta": "Q133492",
+  "entrevista": "Q178651",
+  "patente": "Q253623",
+  "audiência": "Q545861",
+  "apresentação": "Q604733",
+  "projeto de lei": "Q686822",
+  "lei": "Q820655",
+  "obra de arte": "Q838948",
+  "conjunto de dados": "Q1172284",
+  "tese de titulação": "Q1266946",
+  "tese": "Q1266946",
+  "programa de rádio": "Q1555508",
+  "entrada no dicionário": "Q1580166",
+  "capítulo de livro": "Q1980247",
+  "caso legal": "Q2334719",
+  "gravação de áudio": "Q3302947",
+  "artigo jornalístico": "Q5707594",
+  "publicação": "Q7216866",
+  "relatório": "Q10870555",
+  "gravação de vídeo": "Q30070675",
+  "artigo enciclopédico": "Q13433827",
+  "artigo científico": "Q13442814",
+  "publicação de blogue": "Q17928402",
+  "artigo conferência": "Q23927052",
+  "podcast": "Q24634210",
+  "email": "Q30070439",
+  "e-mail": "Q30070439",
+  "correio eletrónico": "Q30070439",
+  "mensagem instantânea": "Q30070565",
+  "artigo de revista": "Q30070590"
+}
+]
+}

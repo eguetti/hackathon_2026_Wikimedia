@@ -1,0 +1,111 @@
+{
+    "queries": [
+	{
+	  "_comment": "-----Artigos------",
+	  "id": "Q1",
+	  "name": "Total_Artigos_Neuromat",
+      "query_user": "Liste o número total de artigos do neuromat.",
+	  "description": "Contagem de artigos que são parte do neuromat.",	  
+	  "synonymous_queries": {
+		"synonym": [          			
+					"Me mostre o número de total de publicações do neuromat."				
+			]
+	  },
+		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total_neuromat)
+                WHERE {  
+                    ?Artigo wdt:P361 wd:Q18477654.  
+                }" ,
+		"query_presentation": "numeric"	
+	},
+    {	  
+	  "id": "Q2",
+	  "name": "Artigos_Neuromat",
+      "query_user": "Liste todos os artigos do neuromat.",
+	  "description": "Mostra todos os artigos que são parte do neuromat.",	  
+	  "synonymous_queries": {
+		"synonym": [          			
+					"Me mostre todas as publicações do neuromat."				
+			]
+	  },
+		"SPARQL": "SELECT ?Artigo ?ArtigoLabel WHERE {
+ 					 ?Artigo wdt:P361 wd:Q18477654.
+  					  SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
+					}" ,
+		"query_presentation": "table"	
+	},
+	{
+      "id": "Q3",
+	  "name": "Total_Artigos_Neuromat_Antonio_Galves",
+      "query_user": "Quantos artigos publicou Antonio Galves no neuromat?",
+	  "description": "Contagem de artigos que foram publicados por Antonio Galves no neuromat.",
+	  "synonymous_queries": {
+		"synonym": [
+					"Me mostre o número de total de publicações do Antonio Galves no neuromat.",
+					"Quantas publicações tem Antonio Galves no neuromat?"
+				]
+		},
+		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total)
+                    WHERE {  
+                    ?Artigo wdt:P361 wd:Q18477654.
+                    ?Artigo wdt:P50 wd:Q17489997. 
+                    } 
+                ",
+		"query_presentation": "numeric"	
+	},
+    {
+      "id": "Q4",
+	  "name": "Total_Artigos_Neuromat_Antonio_Galves",
+      "query_user": "Quais artigos publicou Antonio Galves no neuromat?",
+	  "description": "Artigos publicados por Antonio Galves pelo neuromat.",
+	  "synonymous_queries": {
+		"synonym": [
+					"Me mostre o total de publicações do Antonio Galves no neuromat.",
+					"Quais são as publicações de Antonio Galves no neuromat?"
+				]
+		},
+		"SPARQL": "SELECT ?Artigo ?ArtigoLabel WHERE {
+ 					 ?Artigo wdt:P361 wd:Q18477654;
+    				wdt:P50 wd:Q17489997.
+  					SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
+				}",
+		"query_presentation": "table"	
+	},
+	{
+      "id": "Q5",
+	  "name": "Total_Artigos_Antonio_Galves",
+      "query_user": "Quantos artigos publicou Antonio Galves?",
+	  "description": "Contagem de artigos que foram publicados por Antonio Galves.",
+	  "synonymous_queries": {
+		"synonym": [
+					"Me mostre o número de total de publicações do Antonio Galves.",
+					"Quantas publicações tem Antonio Galves?"
+				]
+		},
+		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total)
+                    WHERE {                      
+                    ?Artigo wdt:P50 wd:Q17489997. 
+                    } 
+                ",
+		"query_presentation": "numeric"	
+	},
+    {
+      "id": "Q6",
+	  "name": "Artigos_Antonio_Galves",
+      "query_user": "Quais artigos publicou Antonio Galves?",
+	  "description": "Artigos publicados por Antonio Galves.",
+	  "synonymous_queries": {
+		"synonym": [
+					"Me mostre o total de publicações do Antonio Galves.",
+					"Quais são as publicações de Antonio Galves?"
+				]
+		},
+		"SPARQL": "SELECT ?Artigo ?ArtigoLabel WHERE {
+ 					 ?Artigo wdt:P50 wd:Q17489997.
+  					SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
+				}",
+		"query_presentation": "table"	
+	}	
+
+	]
+
+}
