@@ -16,7 +16,7 @@
         "description": "Entidade principal que cria uma publicação científica.",
         "object_properties":["e_autor", "" ],
         "data_properties":["qid_autor", "nome", "data_nascimento", "sexo_biologico"],
-        "queries": ["Q3","Q4", "Q5", "Q6"]    
+        "queries": ["Q3","Q4", "Q5", "Q6", "Q7"]    
       },
       {
         "cod":"C3",
@@ -46,7 +46,7 @@
         "cod":"OP1",
         "id" : "e_autor",        
         "label": "é autor de",
-        "synonyms": ["publicou"],
+        "synonyms": ["publicou", "são autores de"],
         "domain": "Autor",
         "range": "Publicacao",
         "property_in_wikidata": "P50"
