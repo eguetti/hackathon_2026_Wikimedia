@@ -95,7 +95,7 @@
 	  "description": "Artigos publicados por Antonio Galves.",
 	  "synonymous_queries": {
 		"synonym": [
-					"Me mostre o total de publicações do Antonio Galves.",
+					"Liste as publicações do Antonio Galves.",
 					"Quais são as publicações de Antonio Galves?"
 				]
 		},
@@ -104,7 +104,28 @@
   					SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
 				}",
 		"query_presentation": "table"	
+	},
+	{
+      "id": "Q7",
+	  "name": "Artigos_Antonio_Galves_Eva_Locherbach",
+      "query_user": "Quais artigos publicaram Antonio Galves e Eva Locherbach?",
+	  "description": "Artigos publicados por Antonclio Galves e Eva Locherbach.",
+	  "synonymous_queries": {
+		"synonym": [
+					"Me mostre as publicações do Antonio Galves e Eva Locherbach.",
+					"Quais foram as publicações de Antonio Galves e Eva Locherbach?"
+				]
+		},
+		"SPARQL": "SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
+  				?Artigo wdt:P50 wd:Q17489997, wd:Q59267761.
+  				SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }",
+		"query_presentation": "table"	
 	}	
+	
+
+
+	
+}
 
 	]
 
