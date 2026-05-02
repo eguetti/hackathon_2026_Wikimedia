@@ -107,6 +107,27 @@
 	},
 	{
       "id": "Q7",
+	  "name": "Total_Artigos_Antonio_Galves_Eva_Locherbach",
+      "query_user": "Quantos artigos publicaram Antonio Galves e Eva Locherbach?",
+	  "description": "Total de artigos publicados por Antonclio Galves e Eva Locherbach.",
+	  "synonymous_queries": {
+		"synonym": [
+					"Me mostre o número de publicações de Antonio Galves e Eva Locherbach.",
+					"Quantas publicações publicaram de Antonio Galves e Eva Locherbach?"
+				]
+		},
+		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total) WHERE {
+  					?Artigo wdt:P50 ?item.
+  					VALUES ?item {
+    					wd:Q17489997
+    					wd:Q59267761
+  					}					
+				}",
+		"query_presentation": "numeric"	
+	}	
+	,
+	{
+      "id": "Q8",
 	  "name": "Artigos_Antonio_Galves_Eva_Locherbach",
       "query_user": "Quais artigos publicaram Antonio Galves e Eva Locherbach?",
 	  "description": "Artigos publicados por Antonclio Galves e Eva Locherbach.",
@@ -117,11 +138,15 @@
 				]
 		},
 		"SPARQL": "SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
-  				?Artigo wdt:P50 wd:Q17489997, wd:Q59267761.
-  				SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }",
+  					?Artigo wdt:P50 ?item.
+  					VALUES ?item {
+    					wd:Q17489997
+    					wd:Q59267761
+  					}
+					SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+				}",
 		"query_presentation": "table"	
-	}	
-	
+	}
 
 
 	
