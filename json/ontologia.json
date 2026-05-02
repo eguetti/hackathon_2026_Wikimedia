@@ -16,7 +16,7 @@
         "description": "Entidade principal que cria uma publicação científica.",
         "object_properties":["e_autor", "" ],
         "data_properties":["qid_autor", "nome", "data_nascimento", "sexo_biologico"],
-        "queries": ["Q3","Q4", "Q5", "Q6", "Q7"]    
+        "queries": ["Q3","Q4", "Q5", "Q6", "Q7", "Q8"]    
       },
       {
         "cod":"C3",
@@ -27,7 +27,7 @@
         "object_properties": ["tem_autor", "parte_de"],
         "data_properties":["qid_artigo"],        
         "instance_of_in_wikidata": "Q13442814",
-        "queries": ["Q1","Q2"]  
+        "queries": ["Q1","Q2","Q5", "Q6", "Q7", "Q8"]  
       },
       {
         "cod":"C4",
