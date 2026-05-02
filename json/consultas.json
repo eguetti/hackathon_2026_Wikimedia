@@ -11,7 +11,7 @@
 					"Me mostre o número de total de publicações do neuromat."				
 			]
 	  },
-		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total_neuromat)
+		"SPARQL": "SELECT DISTINCT (COUNT(?Artigo) AS ?Artigos_total_neuromat)
                 WHERE {  
                     ?Artigo wdt:P361 wd:Q18477654.  
                 }" ,
@@ -44,7 +44,7 @@
 					"Quantas publicações tem Antonio Galves no neuromat?"
 				]
 		},
-		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total)
+		"SPARQL": "SELECT DISTINCT (COUNT(?Artigo) AS ?Artigos_total)
                     WHERE {  
                     ?Artigo wdt:P361 wd:Q18477654.
                     ?Artigo wdt:P50 wd:Q17489997. 
@@ -81,7 +81,7 @@
 					"Quantas publicações tem Antonio Galves?"
 				]
 		},
-		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total)
+		"SPARQL": "SELECT DISTINCT (COUNT(?Artigo) AS ?Artigos_total)
                     WHERE {                      
                     ?Artigo wdt:P50 wd:Q17489997. 
                     } 
@@ -116,7 +116,7 @@
 					"Quantas publicações publicaram de Antonio Galves e Eva Locherbach?"
 				]
 		},
-		"SPARQL": "SELECT (COUNT(?Artigo) AS ?Artigos_total) WHERE {
+		"SPARQL": "SELECT DISTINCT (COUNT(?Artigo) AS ?Artigos_total) WHERE {
   					?Artigo wdt:P50 ?item.
   					VALUES ?item {
     					wd:Q17489997
