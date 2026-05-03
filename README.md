@@ -13,6 +13,13 @@ Query Generation: Automatically constructs valid SELECT or ASK SPARQL queries.
 The system is designed to work with a standard academic schema. 
 Below is a simplified view of the classes and properties involved:
 
+
+| Coluna 1 | Coluna 2 |
+| :--- | :--- |
+| Dado A | Dado B |
+| Dado C | Dado D |
+
+
 **Class**  **Description**  
 Person  Researchers, Professors, and Students.
 Publication  Journal articles, Conference papers, and Books.
