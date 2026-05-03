@@ -21,6 +21,7 @@ Below is a simplified view of the classes and properties involved:
 | Organization | NeuroMAT |
 
 **Example Translation**
+
 Input (Natural Language):
 
 "Quais são os artigos que  publicaram Antonio Galves e Aline Duarte?"
