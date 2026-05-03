@@ -69,6 +69,8 @@ def create_gemini_prompt(user_input: str) -> str:
 
     **PRIORIDADE CRÍTICA**: Use os EXEMPLOS DE REFERÊNCIA como base principal para gerar SPARQL. 
     Adapte os padrões existentes em vez de criar consultas do zero sempre que possível. 
+    É extremamente importante que use principalmente de guia os exemplos em SPARQL. 
+    Os resultados são muito sensíveis por pequenas mudanças.
     Se um exemplo for 80% similar à consulta atual, modifique-o ao invés de criar SPARQL completamente novo.
    
 
@@ -109,7 +111,7 @@ def create_gemini_prompt(user_input: str) -> str:
     2. Retorne EXATAMENTE: {{"reasoning": "...", "sparql": "..."}}"""
     
     
-    return SYSTEM_PROMPT_DYNAMIC_SPARQL
+return SYSTEM_PROMPT_DYNAMIC_SPARQL
 
 
 from typing import Dict, Any, Optional
@@ -180,12 +182,6 @@ if st.button("Consultar"):
     # 1. Set up SPARQL endpoint (Scholarly)
     sparql = SPARQLWrapper("https://query-scholarly.wikidata.org/sparql")
 
-    # 2. Define query (Example: Find papers by author)
-    #query = """SELECT ?Artigo ?ArtigoLabel WHERE {
-    #            ?Artigo wdt:P50 wd:Q17489997.
-    #            SERVICE wikibase:label { bd:serviceParam wikibase:language '[AUTO_LANGUAGE],en'. }
-    #        }
-    #        """
     query = author_name
 
 
