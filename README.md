@@ -27,12 +27,11 @@ Input (Natural Language):
 "Quais são os artigos que  publicaram Antonio Galves e Aline Duarte?"
 
 **Output (SPARQL):**
-```SPARQL
-SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
+```SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
   ?Artigo wdt:P50 ?item.
   VALUES ?item {
     wd:Q17489997
-    wd:Q98767033
+    wd:Q102930817
   }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }
