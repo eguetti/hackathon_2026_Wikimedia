@@ -22,7 +22,7 @@ Below is a simplified view of the classes and properties involved:
 
 **Example Translation**
 
-Input (Natural Language):
+Input (Natural Language in Portuguese):
 
 "Quais são os artigos que  publicaram Antonio Galves e Aline Duarte?"
 
