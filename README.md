@@ -27,7 +27,9 @@ Input (Natural Language):
 "Quais são os artigos que  publicaram Antonio Galves e Aline Duarte?"
 
 **Output (SPARQL):**
-```SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
+
+```sparql
+SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
   ?Artigo wdt:P50 ?item.
   VALUES ?item {
     wd:Q17489997
