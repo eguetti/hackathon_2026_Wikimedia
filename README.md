@@ -19,3 +19,20 @@ Below is a simplified view of the classes and properties involved:
 | Person | Researchers, Professors, and Students. |
 | Publication | Journal articles, Conference papers, and Books. |
 | Organization | NeuroMAT |
+
+**Example Translation**
+Input (Natural Language):
+
+"Quais são os artigos que  publicaram Antonio Galves e Aline Duarte?"
+
+**Output (SPARQL):**
+```SPARQL
+SELECT DISTINCT ?Artigo ?ArtigoLabel WHERE {
+  ?Artigo wdt:P50 ?item.
+  VALUES ?item {
+    wd:Q17489997
+    wd:Q98767033
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
